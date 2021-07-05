@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://localhost:3306/myintranet" />
+		<property name="username" value="root"/>
+		<property name="password" value="123456"/>
+	</bean> -->
+<!-- <Context>
+ <Resource 
+  name="study/security" 
+  auth="Container" 
+  type="javax.sql.DataSource"
+  driverClassName="com.mysql.jdbc.Driver" 
+  loginTimeout="10" 
+  maxWait="5000"
+  username="root" 
+  password="12345" 
+  testOnBorrow="true"
+  url="jdbc:mysql://localhost:3306/myintranet" />
+</Context> -->
+ <Context> 
+     <Resource name="jdbc/OracleDB" 
+         auth="Container"
+         type="javax.sql.DataSource" 
+         username="springuser" 
+         password="1004"
+         driverClassName="oracle.jdbc.driver.OracleDriver"
+         factory="org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory"
+         url="jdbc:oracle:thin:@localhost:1521:XE"
+         maxActive="50" 
+         maxIdle="100"/>  
+ </Context>
